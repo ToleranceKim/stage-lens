@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+asyncpg
+pydantic
+transformers
+pytesseract
+pandas
+pytest
+httpx
+nltk
+scikit-learn
+pillow
+python-decouple
+fastapi-cache2
+loguru
+
