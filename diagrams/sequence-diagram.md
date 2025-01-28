@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant KOPIS as KOPIS API
     participant App as Application Server
@@ -39,3 +40,4 @@ sequenceDiagram
     DB-->>App: 유사한 공연 목록 반환
     App->>DB: 추천 결과 저장 (recommendation_logs)
     App-->>User: 추천 결과 표시
+```
