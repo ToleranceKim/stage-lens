@@ -1,0 +1,241 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "PostgreSQL",
+    "databaseName": "stage_lens",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    }
+  },
+  "table": {
+    "tables": [
+      {
+        "id": "cf1a9f89-9f87-40e6-a8d2-5898528f89fb",
+        "name": "performances",
+        "comment": "공연 정보",
+        "columns": [
+          {
+            "id": "768c95e2-e54e-41f9-b985-58afeb1a6f21",
+            "name": "mt20id",
+            "comment": "공연 ID",
+            "dataType": "varchar",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": true,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "8ad3a4d9-6f6d-4c9e-b0f6-9f8d12d9e2b1",
+            "name": "prfnm",
+            "comment": "공연명",
+            "dataType": "varchar(200)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 75,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "d5e1f2c3-4b5a-6d7e-8f9g-0h1i2j3k4l5m",
+            "name": "sty",
+            "comment": "줄거리",
+            "dataType": "text",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p",
+            "name": "genreid",
+            "comment": "장르코드",
+            "dataType": "varchar(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 70,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 50,
+          "top": 50,
+          "zIndex": 1,
+          "widthName": 80,
+          "widthComment": 60
+        },
+        "visible": true
+      },
+      {
+        "id": "e1d2c3b4-a5b6-4c7d-8e9f-0a1b2c3d4e5f",
+        "name": "story_vectors",
+        "comment": "공연 줄거리 벡터",
+        "columns": [
+          {
+            "id": "f1e2d3c4-b5a6-7c8d-9e0f-1a2b3c4d5e6f",
+            "name": "mt20id",
+            "comment": "공연 ID",
+            "dataType": "varchar",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": true,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "g1f2e3d4-c5b6-8a9b-0c1d-2e3f4g5h6i7j",
+            "name": "story_vector",
+            "comment": "줄거리 벡터",
+            "dataType": "text",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 70,
+              "widthComment": 70,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 400,
+          "top": 50,
+          "zIndex": 2,
+          "widthName": 90,
+          "widthComment": 100
+        },
+        "visible": true
+      }
+    ],
+    "relationships": [
+      {
+        "id": "h1g2f3e4-d5c6-9b0a-1c2d-3e4f5g6h7i8j",
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "cf1a9f89-9f87-40e6-a8d2-5898528f89fb",
+          "columnIds": [
+            "768c95e2-e54e-41f9-b985-58afeb1a6f21"
+          ],
+          "x": 350,
+          "y": 75,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "e1d2c3b4-a5b6-4c7d-8e9f-0a1b2c3d4e5f",
+          "columnIds": [
+            "f1e2d3c4-b5a6-7c8d-9e0f-1a2b3c4d5e6f"
+          ],
+          "x": 400,
+          "y": 75,
+          "direction": "left"
+        }
+      }
+    ]
+  }
+}
