@@ -24,3 +24,4 @@ def get_performance(performance_id: int):
         if performance["id"] == performance_id:
             return performance
     return {"error": "Performance not found"}
+
