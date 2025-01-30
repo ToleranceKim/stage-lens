@@ -1,6 +1,9 @@
 # stage-lens
 줄거리 기반 공연 추천 웹앱 서비스 프로젝트
 
+
+# Sequence Diagram
+
 ```mermaid
 sequenceDiagram
     participant KOPIS as KOPIS API
@@ -44,3 +47,8 @@ sequenceDiagram
     App->>DB: 추천 결과 저장 (recommendation_logs)
     App-->>User: 추천 결과 표시
 ```
+
+# ERD
+
+![stage_lens-2025-01-31T03_21_07](https://github.com/user-attachments/assets/2d99487b-7686-4099-8ce3-bbb3db100a32)
+
